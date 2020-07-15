@@ -1,11 +1,13 @@
-import React from 'react';
-import classNames from 'classnames';
-import './Button.scss';
+import React from "react";
+import classNames from "classnames";
+import "./Button.scss";
 
-function Button({ children, size, color, outline, fullWidth }) {
+function Button({ children, size, color, outline, fullWidth, ...rest }) {
+  console.log(rest);
   return (
     <button
-      className={classNames('Button', size, color, { outline, fullWidth })}
+      className={classNames("Button", size, color, { outline, fullWidth })}
+      {...rest}
     >
       {children}
     </button>
@@ -13,8 +15,8 @@ function Button({ children, size, color, outline, fullWidth }) {
 }
 
 Button.defaultProps = {
-  size: 'medium',
-  color: 'blue'
+  size: "medium",
+  color: "blue",
 };
 
 export default Button;

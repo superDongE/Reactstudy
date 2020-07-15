@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.scss';
-import Button from './components/Button';
+import React from "react";
+import "./App.scss";
+import Button from "./components/Button";
 
 function App() {
   return (
@@ -46,7 +46,17 @@ function App() {
         <Button size="large" fullWidth color="gray">
           BUTTON
         </Button>
-        <Button size="large" fullWidth color="pink">
+        <Button
+          size="large"
+          fullWidth
+          color="pink"
+          onClick={() => {
+            console.log("Click!");
+          }}
+          onMouseMove={() => {
+            console.log("Mouse Move!");
+          }}
+        >
           BUTTON
         </Button>
       </div>
